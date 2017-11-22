@@ -102,7 +102,6 @@
 
 		assessment.prototype.showQuestion = function() {
 			this.currentQuestion = this.getRandomQuestion();
-			console.log(this.questions.length);
 			this.presentedQuestions.push(this.currentQuestion.id);
 			this.count = MAX_QUESTION_COUNTER;
 			let prompt = $('<h1>'), type = this.currentQuestion.type,
@@ -118,6 +117,7 @@
 				inputGroupAddOn = $('<span class="input-group-addon">'),
 				inputLabel = $('<label class="form-control">'),
 				inputControl = $('<input id="choice_1" type="radio" name="choices"/>');
+				
 				inputLabel.attr({for: `choice_${currentChoice.id}`}).text(currentChoice.text);
 				inputControl.attr({
 					id: `choice_${currentChoice.id}`,
