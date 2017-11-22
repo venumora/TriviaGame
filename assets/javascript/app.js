@@ -1,5 +1,5 @@
 (function() {
-	const MAX_START_COUNTER = 5,
+	const MAX_START_COUNTER = 3,
 	MAX_QUESTION_COUNTER = 30;
 	let MAX_QUESTIONS = 5;
 
@@ -22,9 +22,6 @@
 				$('#assessmentPlayerWrapper').hide();
 				$('#correctBar').empty().css({'width': '0%'}).attr({'aria-valuenow': 0});
 				$('#wrongBar').empty().css({'width': '0%'}).attr({'aria-valuenow': 0});
-				$('#countDown').show()
-				.text(`Your assessment will start in ${this.count} secs!!`);
-
 
 				$.getJSON("https://api.myjson.com/bins/7n353", function( data ) {
 					this.questions = data;
@@ -38,13 +35,14 @@
 
 			if(MAX_QUESTIONS > this.presentedQuestions.length) {
 				$('#countDown').show();
-				if (this.counter) {
-					$('#countDown').text(`Your assessment will start in ${this.count} secs!!`);
+				if(isReset) {
+					$('#countDown').text(`Get Ready!!`);
 				} else {
-					$('#countDown').text(`Get ready!!`);
+					$('#countDown').text(`Next question in ${MAX_START_COUNTER} secs!!`);
 				}
 				$('#progressbar').removeClass('progress-bar-danger')
 				.removeClass('progress-bar-danger');
+				this.count = MAX_START_COUNTER;
 				this.counter = setInterval(this.startTestCounter.bind(this), 1000);
 			} else {
 				$('#assessmentPlayer').empty();
@@ -65,7 +63,7 @@
 		};
 
 		assessment.prototype.startTestCounter = function() {
-			$('#countDown').text(`Your assessment will start in ${this.count} ${ this.count > 1 ? 'secs' : 'sec'}!!`);
+			$('#countDown').text(`Next question in ${this.count} ${ this.count > 1 ? 'secs' : 'sec'}!!`);
 			if(this.count === 0) {
 				this.clearCounter();
 				if(this.questions.length) {
@@ -73,7 +71,6 @@
 					this.showQuestion();
 				}
 			}
-
 			this.count--;
 		};
 
@@ -82,7 +79,6 @@
 				clearInterval(this.counter);
 				this.counter = null;
 			}
-			this.count = 0;
 		};
 
 		assessment.prototype.startQuestionCounter = function() {
@@ -101,7 +97,6 @@
 				this.clearCounter();
 				this.checkAnswer();
 			}
-
 			this.count--;
 		};
 
