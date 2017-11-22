@@ -12,17 +12,17 @@ html {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background-color: #666;
-	text-align: center;
-	color: #FFF;
 	padding: 10px;
+	color: #fff;
+	text-align: center;
+	background-color: #159957;
+	background-image: linear-gradient(120deg, #155799, #159957);
 }
 
 body {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	color: #777;
-	background: url("../images/bg.png");
-	font-size: 16px;
+		font-size: 16px;
 	margin: 0;
 	margin-bottom: 70px;
 }
@@ -76,4 +76,28 @@ a {
 	display: table;
 	clear: both;
 	height: 0px;
+}
+
+.jumbotron {
+	color: #fff;
+	text-align: center;
+	background-color: #159957;
+	background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+.input-group {
+	width: 50%;
+	margin-top: 16px;
+}
+
+.input-group .form-control {
+	display: table;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.btn-primary {
+	margin-top: 16px;
 }

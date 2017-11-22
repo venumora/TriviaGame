@@ -1,7 +1,7 @@
 [
 	{"question": 
 		{
-			"id": "1",
+			"id": 1,
 			"type": "choice",
 			"prompt": {
 				"text": "Which line of code modifies the text inside an element?",
