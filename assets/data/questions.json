@@ -1,0 +1,158 @@
+[
+	{"question": 
+		{
+			"id": "1",
+			"type": "choice",
+			"prompt": {
+				"text": "Which line of code modifies the text inside an element?",
+				"answer": 1,
+				"choices": [
+					{"choice": {"id": 1, "text": "$('div').text('Hello World');" }},
+					{"choice": {"id": 2, "text": "$('div').value('Hello World');" }},
+					{"choice": {"id": 3, "text": "$('div').text = 'Hello World';" }},
+					{"choice": {"id": 4, "text": "$('div').value = 'Hello World';" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 2,
+			"type": "choice-multiple",
+			"prompt": {
+				"text": "Which two lines of code append content inside an element?",
+				"answer": [1,4],
+				"choices": [
+					{"choice": {"id": 1, "text": "$('content').appendTo(' selector ');" }},
+					{"choice": {"id": 2, "text": "$('content').insertBefore(' selector ');" }},
+					{"choice": {"id": 3, "text": "$('content').insertAfter(' selector ');" }},
+					{"choice": {"id": 4, "text": "$('selector').append('content');" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 3,
+			"type": "choice-multiple",
+			"prompt": {
+				"text": "Which two lines of code append content outside an element?",
+				"answer": [2,4],
+				"choices": [
+					{"choice": {"id": 1, "text": "$('selector').after('content');" }},
+					{"choice": {"id": 2, "text": "$('content').insertBefore('selector');" }},
+					{"choice": {"id": 3, "text": "$('content').appendTo('selector');" }},
+					{"choice": {"id": 4, "text": "$('content').prependTo('selector');" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 4,
+			"type": "choice",
+			"prompt": {
+				"text": "Which line of code chain copies an element and appends it to another element?",
+				"answer": 2,
+				"choices": [
+					{"choice": {"id": 1, "text": "$('selector').appendTo().clone('selector2');" }},
+					{"choice": {"id": 2, "text": "$('selector').clone().appendTo('selector2');" }},
+					{"choice": {"id": 3, "text": "$('selector').copy().appendTo('selector2');" }},
+					{"choice": {"id": 4, "text": "$('selector').appendTo().copy('selector2');" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 5,
+			"type": "choice",
+			"prompt": {
+				"text": "True or false: You can create new elements without placing them in the DOM.",
+				"answer": 2,
+				"choices": [
+					{"choice": {"id": 1, "text": "False" }},
+					{"choice": {"id": 2, "text": "True" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 6,
+			"type": "choice",
+			"prompt": {
+				"text": "Which code segment adds and displays a new anchor?",
+				"answer": 3,
+				"choices": [
+					{"choice": {"id": 1, "text": "var newLink = $('a', {<br />&nbsp;&nbsp;&nbsp; &hellip;<br />});" }},
+					{"choice": {"id": 2, "text": "var newLink = $('a', {<br />&nbsp;&nbsp;&nbsp; &hellip;<br />});<br />$(newLink).appendTo('selector');" }},
+					{"choice": {"id": 3, "text": "var newLink = $('&lt;a/&gt;', {<br />&nbsp;&nbsp;&nbsp; &hellip;<br />});<br />$(newLink).appendTo('selector');" }},
+					{"choice": {"id": 4, "text": "var newLink = $('&lt;a/&gt;', {\"&nbsp\";&nbsp; &hellip; });" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 7,
+			"type": "choice",
+			"prompt": {
+				"text": "Which method should you use to save performance when working on a large element?",
+				"answer": 3,
+				"choices": [
+					{"choice": {"id": 1, "text": "remove()" }},
+					{"choice": {"id": 2, "text": "detach()" }},
+					{"choice": {"id": 3, "text": "empty()" }},
+					{"choice": {"id": 4, "text": "erase()" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 8,
+			"type": "choice",
+			"prompt": {
+				"text": "Which line of code modifies an attribute?",
+				"answer": 1,
+				"choices": [
+					{"choice": {"id": 1, "text": "$('selector').attr('name', 'value');" }},
+					{"choice": {"id": 2, "text": "$('attr').set('name', 'value');" }},
+					{"choice": {"id": 3, "text": "$('attr').set('name', 'value');" }},
+					{"choice": {"id": 4, "text": "$('selector').attr('value');" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 9,
+			"type": "choice",
+			"prompt": {
+				"text": "Which line of code styles an element?",
+				"answer": 1,
+				"choices": [
+					{"choice": {"id": 1, "text": "$('selector').css('style', 'value');" }},
+					{"choice": {"id": 2, "text": "$('selector')setStyle.('style', 'value');" }},
+					{"choice": {"id": 3, "text": "$.css('style', 'value');" }},
+					{"choice": {"id": 4, "text": "$.setStyle('style', 'value');" }}
+				]
+			}
+		}
+	},
+	{"question": 
+		{
+			"id": 10,
+			"type": "choice",
+			"prompt": {
+				"text": "True or false: You can add and remove classes to elements.",
+				"answer": 1,
+				"choices": [
+					{"choice": {"id": 1, "text": "True" }},
+					{"choice": {"id": 2, "text": "False" }}
+				]
+			}
+		}
+	}
+]
